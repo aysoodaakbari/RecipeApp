@@ -10,24 +10,27 @@ import {
  
 const welcomeScreen = () => {
   return (
-    <ImageBackground style={styles.background} source={require('../../assets/backgroundFood.jpg')}>
+    <ImageBackground style={styles.background} source={require('../../assets/restaurant/pexels-rachel-claire-5490385.jpeg')}>
        <View style={styles.cover}></View>
        <View style={{
-        backgroundColor:"#fff",
+       
         position:"absolute",
         height:'100%',
         width:'100%',
         zIndex:2,
         justifyContent:'flex-end',
         paddingHorizontal:20,
-        marginBottom:20
+        paddingBottom:20
 
        }}>
         <View>
-            <Text>Hello</Text>
-            <Text>FOOD LOVERS</Text>
-            <TouchableOpacity>
-                <Text>Explorer Now</Text>
+            <Text style={styles.header}>Hello</Text>
+            <Text style={styles.textBody}>FOOD LOVERS</Text>
+            <TouchableOpacity style={styles.exbutton}>
+                <Text style={{
+                  color:"#000",
+                  fontWeight:"700"
+                }}>Explorer Now</Text>
             </TouchableOpacity>
         </View>
        </View>
@@ -44,7 +47,30 @@ const styles=StyleSheet.create({
      flex:1,
      backgroundColor:"#000",
      opacity:0.2
+    },
+    header:{
+      color:"#fff",
+      fontSize:45,
+      fontWeight:"800",
+    textTransform:"capitalize"
+      
+    },
+    textBody:
+    {
+      color:"#fff",
+      fontSize:20,
+      fontWeight:"600"
     }
+    ,
+    exbutton:
+    {
+       backgroundColor:"#FFF",
+       padding:20,
+       borderRadius:20,
+       alignItems:"center"
+    }
+    
+
 
 })
 export default welcomeScreen
